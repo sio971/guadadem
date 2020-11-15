@@ -58,6 +58,7 @@ public class Absence {
 		this.laDemande = laDemande;
 	}
 	/**
+	 * Fournir le code de la méthode getJoursAbsence de la classe Absence.
 	 * Mission3-Question4
 	 * retourne laliste des jours ouvrables du mois spécifié que couvre l'absence
 	 * le principe est de parcourir les jours d'absence et vérifier s'ils sont dans 
@@ -72,9 +73,27 @@ public class Absence {
 	 * @return
 	 */
 	public List<DateFr> getLesJoursAbsence(int unMois, int uneAnnee){
+		//on déclare la variable à retourner
+		List<DateFr> lesJoursAbs = new ArrayList<DateFr>();
+		//le principe est de parcourir les jours d'absence (entre la date début et la date fin)
+		DateFr dateEnCours = this.laDateDebut;
+		//on parcours les jours jusqu'à la date de fin (comprise)
+		while (!dateEnCours.estApres(this.laDateFin)){
+			//on regarde si la date correspond aux arguments passés (le mois, l'année)
+			if (dateEnCours.getAnnee()== uneAnnee && dateEnCours.getMois() ==unMois) {
+				//on regarde si le jour est ouvrable
+				if (dateEnCours.estJourOuvrable()) {
+					//si oui on l'ajoute aux jours d'absence
+					lesJoursAbs.add(dateEnCours);
+				}
+			}
+			//On passe au jour suivant
+			dateEnCours = dateEnCours.getJourSuivant();
+		}
 		
 		
-		return null;
+		//on retourne le résultat
+		return lesJoursAbs;
 	}
 
 	
