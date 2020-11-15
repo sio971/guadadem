@@ -51,6 +51,7 @@ public class DemandeAbsence {
 	}
 	
 	public void accepter(){
+		this.laAbsence.setLeEtat("ACC");
 		
 	}
 	/**
@@ -66,6 +67,12 @@ public class DemandeAbsence {
 		this.laAbsence.setLeEtat("REF");
 		//et en mémorise le motif
 		this.leMotifRefus = unMotifRefus;
+	}
+
+	@Override
+	public String toString() {
+		return "DemandeAbsence [" + laDateDemande + ", " + laDateReponse + ", leMotifRefus="
+				+ leMotifRefus + ", laAbsence=" + laAbsence + "]";
 	}
 
 	

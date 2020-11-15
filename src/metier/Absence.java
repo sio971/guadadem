@@ -96,6 +96,14 @@ public class Absence {
 		return lesJoursAbs;
 	}
 
+	@Override
+	public String toString() {
+		return "Absence [laDateDebut=" + laDateDebut + ", laDateFin=" + laDateFin + ", leMotif=" + leMotif + ", leEtat="
+				+ leEtat + ", leSalarie=" + leSalarie + ",]";
+	}
+	
+	
+
 	
 	
 

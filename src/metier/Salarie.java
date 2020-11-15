@@ -75,5 +75,12 @@ public class Salarie {
 		
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Salarie [ "+leMatricule + ",  " + leNom + ",  =" + lePrenom + ",]";
+	}
+	
+	
 	
 }
