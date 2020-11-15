@@ -71,7 +71,7 @@ public class Salarie {
 		} 
 		
 		return lesAbsencesEnAttente;
-		return null;
+		
 		
 		
 	}
