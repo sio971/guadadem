@@ -54,13 +54,18 @@ public class DemandeAbsence {
 		
 	}
 	/**
+	 * Fournir le code de la méthode refuser 
+	 * de la classe DemandeAbsence.
 	 * Mission3-Question2
 	 * constate le refus de la demande et en mémorise le motif
 	 * 
 	 * @param unMotifRefus
 	 */
 	public void refuser(String unMotifRefus){
-		//todo
+		//constate le refus de la demande
+		this.laAbsence.setLeEtat("REF");
+		//et en mémorise le motif
+		this.leMotifRefus = unMotifRefus;
 	}
 
 	
