@@ -42,13 +42,13 @@ public class Salarie {
 	private String getLePrenom() {
 		return lePrenom;
 	}
-	/**
+	/**Fournir le code de la méthode ajouterAbsence de la classe Salarie.
 	 * Mission3-Question1
 	 * ajoute une absence à la collection les absences
 	 * @param uneAbsence
 	 */
 	public void ajouterAbsence(Absence uneAbsence){
-		//todo
+		lesAbsences.add(uneAbsence);
 	}
 	/**Mission3-Question3
 	 * retourne la collection des absences en attente de traitement
