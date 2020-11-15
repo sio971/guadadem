@@ -50,13 +50,27 @@ public class Salarie {
 	public void ajouterAbsence(Absence uneAbsence){
 		lesAbsences.add(uneAbsence);
 	}
-	/**Mission3-Question3
+	/**
+	 * Fournir le code de la méthode
+	 * getAbsencesEnAttente de la classe Salarie.
+	 * Mission3-Question3
 	 * retourne la collection des absences en attente de traitement
 	 * par le responsable (leEtat=ATT)
 	 * @return
 	 */
 	public List<Absence> getLesAbsencesEnAttente(){
+		//on déclare une variable qui a le type du retour
+		List<Absence> lesAbsencesEnAttente = new ArrayList<Absence>();
+		//On parcours la liste des absences
+		for(Absence a: lesAbsences) {
+			//on compare l'état de l'absence à "ATT": en attente
+			if (a.getLeEtat()== "ATT") {
+				//on l'ajoute au résultat
+				lesAbsencesEnAttente.add(a);
+			}
+		} 
 		
+		return lesAbsencesEnAttente;
 		return null;
 		
 		
